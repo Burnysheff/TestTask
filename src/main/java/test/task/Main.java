@@ -97,12 +97,10 @@ public class Main {
 
         // we find closes to 0.9 as we have a discrete distribution here
         for (int i = 0; i < diffs.size(); ++i) {
+            System.out.println(diffs.get(i));
             if (i / (double) diffs.size() < 0.9) {
                 index = i;
             } else {
-                if ((i / (double) diffs.size() - 0.9) < (index - 0.9)) {
-                    index = i;
-                }
                 break;
             }
         }
